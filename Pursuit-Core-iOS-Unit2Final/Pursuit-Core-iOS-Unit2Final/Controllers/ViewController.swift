@@ -53,15 +53,14 @@ extension ViewController: UITableViewDataSource {
         
         cell.textLabel?.text = color.name
         cell.detailTextLabel?.text = color.hex
-        cell.alpha = 1
         
-        if color.red == 0 && color.green == 0 && color.blue == 0 {
+        
+        if color.name == "Black" {
             cell.textLabel?.textColor = .white
             cell.detailTextLabel?.textColor = .white
-            cell.backgroundColor = UIColor(red: CGFloat(color.red)/CGFloat(255), green: CGFloat(color.green)/CGFloat(255), blue: CGFloat(color.blue)/CGFloat(255), alpha: 0.85)
-        } else {
-            cell.backgroundColor = UIColor(red: CGFloat(color.red)/CGFloat(255), green: CGFloat(color.green)/CGFloat(255), blue: CGFloat(color.blue)/CGFloat(255), alpha: 0.85)
+            
         }
+        cell.backgroundColor = UIColor(red: CGFloat(color.red)/CGFloat(255), green: CGFloat(color.green)/CGFloat(255), blue: CGFloat(color.blue)/CGFloat(255), alpha: 1.0)
         return cell
     }
     
