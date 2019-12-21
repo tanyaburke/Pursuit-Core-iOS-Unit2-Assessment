@@ -60,26 +60,28 @@ class SettingsViewController: UIViewController {
         redValue.text = "Red: \(redV.description)"
         greenValue.text = "Green: \(redV.description)"
         blueValue.text = "Blue: \(blueV.description)"
-        
+       configureStepper()
         
     }
     func configureStepper() {
-        alphaStepper.value = Double(alphaV)
-       
+         alphaStepper.minimumValue = 0
+         alphaStepper.maximumValue = 1
+        alphaStepper.stepValue = 0.1
+
      }
-    func configureRedSlider() {
-      redSlider.minimumValue = 0
-      redSlider.maximumValue = 255
-    }
-    func configureGreenSlider() {
-      greenSlider.minimumValue = 0
-      greenSlider.maximumValue = 255
-    }
-    func configureBlueSlider() {
-  blueSlider.minimumValue = 0
-           blueSlider.maximumValue = 255
-        
-    }
+//    func configureRedSlider() {
+//      redSlider.minimumValue = 0
+//      redSlider.maximumValue = 255
+//    }
+//    func configureGreenSlider() {
+//      greenSlider.minimumValue = 0
+//      greenSlider.maximumValue = 255
+//    }
+//    func configureBlueSlider() {
+//  blueSlider.minimumValue = 0
+//           blueSlider.maximumValue = 255
+//
+//    }
     
     
     @IBAction func reset(_ sender: UIButton) {
@@ -127,6 +129,10 @@ class SettingsViewController: UIViewController {
                                        green: CGFloat(tempGreenV)/CGFloat(255),
                                        blue: CGFloat(tempBlueV)/CGFloat(255),
                                        alpha: alphaV)
+    }
+    
+    @IBAction func slidderAction(_ sender: Any) {
+        alphaV = sender as? CGFloat
     }
     
 }

@@ -79,8 +79,11 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="am5-Kh-8cU">
                                 <rect key="frame" x="20" y="244" width="100" height="0.0"/>
                             </stackView>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="1" stepValue="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="fwl-Ou-0qd">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="1" stepValue="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="fwl-Ou-0qd">
                                 <rect key="frame" x="26" y="323" width="94" height="32"/>
+                                <connections>
+                                    <action selector="slidderAction:" destination="kBl-0C-TIB" eventType="valueChanged" id="kYx-e0-1pM"/>
+                                </connections>
                             </stepper>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOw-QF-Yl8">
                                 <rect key="frame" x="180" y="431.66666666666669" width="47" height="33"/>
